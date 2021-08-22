@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/signup_username"
+        android:id="@+id/et_signup_username"
         android:layout_width="345dp"
         android:layout_height="39dp"
         android:layout_marginTop="28dp"
@@ -15,23 +15,24 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup_text" />
 
     <TextView
-        android:id="@+id/signup_text"
+        android:id="@+id/tv_signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:fontFamily="sans-serif"
         android:text="@string/signup"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_signup_logo" />
 
     <EditText
-        android:id="@+id/signup_password"
+        android:id="@+id/et_signup_password"
         android:layout_width="345dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -40,10 +41,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_username" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_username" />
 
     <EditText
-        android:id="@+id/signup_name"
+        android:id="@+id/et_signup_name"
         android:layout_width="345dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -52,10 +53,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_password" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_password" />
 
     <EditText
-        android:id="@+id/signup_date"
+        android:id="@+id/et_signup_date"
         android:layout_width="345dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -64,10 +65,10 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_name" />
 
     <EditText
-        android:id="@+id/signup_uid"
+        android:id="@+id/et_signup_uid"
         android:layout_width="345dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
@@ -76,48 +77,50 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_date" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_date" />
 
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="218dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="80dp"
+        android:id="@+id/iv_signup_logo"
+        android:layout_width="256dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="56dp"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/genshin_builds_logo" />
 
     <Button
-        android:id="@+id/signup_cancel"
+        android:id="@+id/btn_signup_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
         android:text="@string/cancel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_uid" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_uid" />
 
     <Button
-        android:id="@+id/signup_confirm"
+        android:id="@+id/btn_signup_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:text="@string/confirm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_uid" />
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_uid" />
 
     <ImageView
-        android:id="@+id/signup_paimon"
-        android:layout_width="143dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="80dp"
+        android:id="@+id/iv_signup_paimon"
+        android:layout_width="wrap_content"
+        android:layout_height="181dp"
+        android:layout_marginTop="12dp"
         android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_signup_confirm"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/btn_signup_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/et_signup_uid"
         app:srcCompat="@drawable/character_paimon_portrait" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
