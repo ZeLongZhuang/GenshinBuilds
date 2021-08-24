@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8sp"
+        android:background="@drawable/build_round_card">
+
+        <ImageButton
+            android:id="@+id/ib_user_pic"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_lumine" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traveller123"
+            app:layout_constraintBottom_toBottomOf="@+id/ib_user_pic"
+            app:layout_constraintStart_toEndOf="@+id/ib_user_pic"
+            app:layout_constraintTop_toTopOf="@+id/ib_user_pic"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_item_label_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Character"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert1"
+            app:layout_constraintTop_toBottomOf="@+id/ib_user_pic" />
+
+        <TextView
+            android:id="@+id/tv_item_value_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zhongli"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_label_character" />
+
+        <TextView
+            android:id="@+id/tv_item_label_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_character"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_character" />
+
+        <TextView
+            android:id="@+id/tv_item_value_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_character" />
+
+        <TextView
+            android:id="@+id/tv_item_label_weapon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weapon"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_character"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_level" />
+
+        <TextView
+            android:id="@+id/tv_item_value_weapon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Black Tassel"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_label_weapon" />
+
+        <TextView
+            android:id="@+id/tv_item_label_artifact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artifact Set"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_character"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_weapon" />
+
+        <TextView
+            android:id="@+id/tv_item_value_artifact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4x Retracing Bolide"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_label_artifact" />
+
+        <TextView
+            android:id="@+id/tv_item_overall_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall Stats ---"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_character"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_artifact" />
+
+        <TextView
+            android:id="@+id/tv_item_label_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HP"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_overall_stats" />
+
+        <TextView
+            android:id="@+id/tv_item_value_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4802"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_label_hp" />
+
+        <TextView
+            android:id="@+id/tv_item_label_atk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATK"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_hp" />
+
+        <TextView
+            android:id="@+id/tv_item_value_atk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="598"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_value_hp" />
+
+        <TextView
+            android:id="@+id/tv_item_label_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEF"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_atk"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_atk" />
+
+        <TextView
+            android:id="@+id/tv_item_value_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="831"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_value_atk" />
+
+        <TextView
+            android:id="@+id/tv_item_label_er"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ER"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_def" />
+
+        <TextView
+            android:id="@+id/tv_item_value_er"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_value_def" />
+
+        <TextView
+            android:id="@+id/tv_item_label_crate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CRIT RATE"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_er"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_er" />
+
+        <TextView
+            android:id="@+id/tv_item_value_crate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_value_er" />
+
+        <TextView
+            android:id="@+id/tv_item_label_cdmg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CRIT DMG"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_label_crate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_label_crate" />
+
+        <TextView
+            android:id="@+id/tv_item_value_cdmg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="88"
+            app:layout_constraintStart_toStartOf="@+id/gl_vert3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_value_crate" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vert1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".1"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vert3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".4"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
