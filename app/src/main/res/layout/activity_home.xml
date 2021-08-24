@@ -39,32 +39,37 @@
             app:layout_constraintTop_toTopOf="@+id/iv_home_user_pic" />
 
         <Button
-            android:id="@+id/btn_home_view_profile"
+            android:id="@+id/btn_home_logout"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:text="View Profile"
+            android:text="Log out"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/tv_home_user_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_home_user_name" />
 
-        <Button
-            android:id="@+id/btn_home_view_farming"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Talent Farming"
-            android:textSize="12sp"
+        <ImageView
+            android:id="@+id/iv_home_farming_sched"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_user_pic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/iv_home_user_pic"
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
 
-        <Button
-            android:id="@+id/btn_home_logout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#B31E1E"
-            android:text="Log out"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_home_view_farming" />
+        <ImageView
+            android:id="@+id/iv_home_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_farming_sched"
+            app:layout_constraintEnd_toStartOf="@+id/iv_home_farming_sched"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_user_pic"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_farming_sched"
+            app:srcCompat="@drawable/ic_baseline_edit_24"
+            app:layout_constraintHorizontal_bias=".95"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
