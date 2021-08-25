@@ -25,4 +25,6 @@
     <string name="crit_rate">CRIT RATE</string>
     <string name="crit_dmg">CRIT DMG</string>
     <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="uid_no">UID</string>
 </resources>
