@@ -1,10 +1,16 @@
 package com.mobdeve.group30.genshinbuilds;
 
 public class Build {
+
+    private String username;
+    private int userPic;
     private String character, weapon, artifactSet;
     int level, hp, atk, def, er, critRate, critDmg;
 
-    public Build(String character, String weapon, String artifactSet, int level, int hp, int atk, int def, int critRate, int crtiDmg) {
+    public Build(String username, String character, String weapon, String artifactSet, int level, int hp, int atk, int def, int critRate, int crtiDmg) {
+        this.username = username;
+        this.userPic = R.drawable.user_lumine;
+
         this.character = character;
         this.weapon = weapon;
         this.artifactSet = artifactSet;
@@ -15,6 +21,14 @@ public class Build {
         this.er = er;
         this.critRate = critRate;
         this.critDmg = crtiDmg;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getUserPic() {
+        return userPic;
     }
 
     public String getCharacter() {

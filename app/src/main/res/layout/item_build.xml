@@ -12,7 +12,7 @@
         android:background="@drawable/build_round_card">
 
         <ImageButton
-            android:id="@+id/ib_user_pic"
+            android:id="@+id/ib_item_user_pic"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:adjustViewBounds="true"
@@ -22,13 +22,13 @@
             app:srcCompat="@drawable/user_lumine" />
 
         <TextView
-            android:id="@+id/tv_username"
+            android:id="@+id/tv_item_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Traveller123"
-            app:layout_constraintBottom_toBottomOf="@+id/ib_user_pic"
-            app:layout_constraintStart_toEndOf="@+id/ib_user_pic"
-            app:layout_constraintTop_toTopOf="@+id/ib_user_pic"
+            app:layout_constraintBottom_toBottomOf="@+id/ib_item_user_pic"
+            app:layout_constraintStart_toEndOf="@+id/ib_item_user_pic"
+            app:layout_constraintTop_toTopOf="@+id/ib_item_user_pic"
             android:fontFamily="sans-serif-medium"
             android:textSize="14dp"/>
 
@@ -39,7 +39,7 @@
             android:text="Character"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/gl_vert1"
-            app:layout_constraintTop_toBottomOf="@+id/ib_user_pic" />
+            app:layout_constraintTop_toBottomOf="@+id/ib_item_user_pic" />
 
         <TextView
             android:id="@+id/tv_item_value_character"
