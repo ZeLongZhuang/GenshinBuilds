@@ -48,7 +48,7 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public Boolean insertUser(String username, String password, String name, Date birthday, String uid) {
+    public Boolean insertUser(String username, String password, String name, String birthday, String uid) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(USER_COLUMN_USERNAME, username);
@@ -70,9 +70,9 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
 
         if(cursor.getCount() > 0)   // if found out that the username exists, which means USERNAME NOT UNIQUE
-            return true;
-        else                        // if username not taken
             return false;
+        else                        // if username not taken, which means USERNAME IS UNIQUE
+            return true;
     }
 
     public Boolean verifyUsernamePassword(String username, String password) {
