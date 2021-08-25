@@ -12,4 +12,17 @@
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="username">Username</string>
+    <string name="add_build">Add Build</string>
+    <string name="chara">Character</string>
+    <string name="lvl">Level</string>
+    <string name="weapon">Weapon</string>
+    <string name="arti_set">Artifact Set</string>
+    <string name="overall">Overall Stats</string>
+    <string name="hp">HP</string>
+    <string name="atk">ATK</string>
+    <string name="def">DEF</string>
+    <string name="er">ER</string>
+    <string name="crit_rate">CRIT RATE</string>
+    <string name="crit_dmg">CRIT DMG</string>
+    <string name="profile">Profile</string>
 </resources>
