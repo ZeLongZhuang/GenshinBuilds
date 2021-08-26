@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+
     private EditText etUsername, etPassword;
     private Button btnLogin, btnSignup;
 
@@ -42,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     if(myDB.verifyUsernamePassword(username, password)) {   // if username and password is a match
                         Toast.makeText(MainActivity.this, "Login successfully.", Toast.LENGTH_SHORT).show();
+
                         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                        intent.putExtra(KEY_USERNAME, username);
                         startActivity(intent);
                         finish();
                     }

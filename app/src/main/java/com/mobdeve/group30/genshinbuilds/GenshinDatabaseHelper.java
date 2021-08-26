@@ -24,6 +24,21 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
     private static final String USER_COLUMN_BIRTHDAY = "birthday";
     private static final String USER_COLUMN_UID = "uid";
 
+    private static final String BUILD_TABLE_NAME = "builds";
+    private static final String BUILD_COLUMN_ID = "_id";
+    private static final String BUILD_COLUMN_USERNAME = "username";
+    private static final String BUILD_COLUMN_LEVEL = "level";
+    private static final String BUILD_COLUMN_CHARACTER = "character";
+    private static final String BUILD_COLUMN_WEAPON = "weapon";
+    private static final String BUILD_COLUMN_ARTIFACTSET = "artifactset";
+    private static final String BUILD_COLUMN_HP = "hp";
+    private static final String BUILD_COLUMN_ATK = "atk";
+    private static final String BUILD_COLUMN_DEF = "def";
+    private static final String BUILD_COLUMN_ER = "er";
+    private static final String BUILD_COLUMN_CRITRATE = "critrate";
+    private static final String BUILD_COLUMN_CRITDMG = "critdamage";
+
+
     GenshinDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
@@ -31,7 +46,7 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + USER_TABLE_NAME +
+        String queryUser = "CREATE TABLE " + USER_TABLE_NAME +
                 " (" + USER_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 USER_COLUMN_USERNAME + " TEXT, " +
                 USER_COLUMN_PASSWORD + " TEXT, " +
@@ -39,12 +54,29 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
                 USER_COLUMN_BIRTHDAY + " DATE, " +
                 USER_COLUMN_UID + " TEXT);";
 
-        db.execSQL(query);
+        db.execSQL(queryUser);
+
+        String queryBuild = "CREATE TABLE " + BUILD_TABLE_NAME +
+                " (" + BUILD_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                BUILD_COLUMN_USERNAME + " TEXT, " +
+                BUILD_COLUMN_LEVEL + " INTEGER, " +
+                BUILD_COLUMN_CHARACTER + " TEXT, " +
+                BUILD_COLUMN_WEAPON + " TEXT, " +
+                BUILD_COLUMN_ARTIFACTSET + " TEXT, " +
+                BUILD_COLUMN_HP + " INTEGER, " +
+                BUILD_COLUMN_ATK + " INTEGER, " +
+                BUILD_COLUMN_DEF + " INTEGER, " +
+                BUILD_COLUMN_ER + " INTEGER, " +
+                BUILD_COLUMN_CRITRATE + " INTEGER, " +
+                BUILD_COLUMN_CRITDMG + " INTEGER);";
+
+        db.execSQL(queryBuild);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + USER_TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + BUILD_TABLE_NAME);
         onCreate(db);
     }
 
@@ -83,5 +115,28 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
             return true;
         else                        // if username and password doesn't match
             return false;
+    }
+
+    public Boolean insertBuild(String username, String character, int level, String weapon, String artifactSet, int hp, int atk, int def, int er, int critRate, int critDmg) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(BUILD_COLUMN_USERNAME, username);
+        cv.put(BUILD_COLUMN_CHARACTER, character);
+        cv.put(BUILD_COLUMN_LEVEL, level);
+        cv.put(BUILD_COLUMN_WEAPON, weapon);
+        cv.put(BUILD_COLUMN_ARTIFACTSET, artifactSet);
+        cv.put(BUILD_COLUMN_HP, hp);
+        cv.put(BUILD_COLUMN_ATK, atk);
+        cv.put(BUILD_COLUMN_ER, er);
+        cv.put(BUILD_COLUMN_CRITRATE, critRate);
+        cv.put(BUILD_COLUMN_CRITDMG, critDmg);
+
+
+        long result = db.insert(BUILD_TABLE_NAME, null, cv);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
     }
 }

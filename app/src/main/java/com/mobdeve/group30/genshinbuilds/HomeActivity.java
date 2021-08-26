@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -16,11 +17,19 @@ public class HomeActivity extends AppCompatActivity {
     ImageView ivEditProfile, ivFarmingSched;
     FloatingActionButton fabAddBuild;
 
+    TextView tvUsername;
+
+    String currentUsername;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        this.tvUsername = findViewById(R.id.tv_home_user_name);
+        this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
+        this.tvUsername.setText(currentUsername);
 
         this.btnLogout = findViewById(R.id.btn_home_logout);
         this.ivEditProfile = findViewById(R.id.iv_home_edit_profile);
