@@ -10,13 +10,14 @@
         android:id="@+id/tv_edit_profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/edit_profile"
         android:textColor="@color/gray"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".03"/>
 
     <ImageView
         android:id="@+id/iv_edit_profile_img"
@@ -44,7 +45,7 @@
         android:id="@+id/et_edit_profile_username"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textPersonName"
@@ -56,7 +57,7 @@
         android:id="@+id/et_edit_profile_password"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -68,7 +69,7 @@
         android:id="@+id/et_edit_profile_name"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
@@ -80,7 +81,7 @@
         android:id="@+id/et_edit_profile_bday"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/bday"
         android:inputType="date"
@@ -92,13 +93,20 @@
         android:id="@+id/et_edit_profile_uid"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/uid_no"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_edit_profile_bday" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_edit_profile_hori1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".8"/>
 
     <Button
         android:id="@+id/btn_edit_profile_confirm"
