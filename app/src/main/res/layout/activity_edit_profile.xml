@@ -104,10 +104,10 @@
         android:id="@+id/btn_edit_profile_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/gray"
         android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_edit_profile_uid" />
 
@@ -116,9 +116,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
         android:backgroundTint="@color/gray"
         android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_edit_profile_uid" />
 </androidx.constraintlayout.widget.ConstraintLayout>

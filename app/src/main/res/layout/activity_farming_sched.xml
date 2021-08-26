@@ -28,11 +28,10 @@
         android:id="@+id/monwedConstraintLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/build_round_card"
         android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_title">
 
@@ -113,7 +112,7 @@
         android:id="@+id/tuesfriConstraintLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/build_round_card"
         android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -195,11 +194,10 @@
         android:id="@+id/wedsatConstraintLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/build_round_card"
         android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tuesfriConstraintLayout">
 
@@ -273,12 +271,13 @@
         android:id="@+id/sunConstraintLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:background="@drawable/build_round_card"
         android:backgroundTint="#99F9F3E5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout"
+        app:layout_constraintVertical_bias="0.07999998">
 
         <TextView
             android:id="@+id/tv_farming_sched_sun"
