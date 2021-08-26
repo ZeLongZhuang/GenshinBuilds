@@ -453,4 +453,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_50"
+        app:tint="@color/gray" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
