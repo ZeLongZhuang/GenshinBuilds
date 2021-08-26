@@ -10,7 +10,7 @@
         android:id="@+id/tv_farming_sched_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:shadowColor="@color/gray"
         android:shadowDx="3"
@@ -20,17 +20,19 @@
         android:textColor="@color/yellow_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/monwedConstraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="#BFF9F3E5"
+        android:background="@drawable/build_round_card"
+        android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_title">
 
@@ -40,6 +42,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="@string/mon_thurs"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -108,10 +111,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tuesfriConstraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="#BFF9F3E5"
+        android:background="@drawable/build_round_card"
+        android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monwedConstraintLayout">
@@ -122,6 +126,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="@string/tues_fri"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -188,11 +193,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/wedsatConstraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="#BFF9F3E5"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/build_round_card"
+        android:backgroundTint="#99F9F3E5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tuesfriConstraintLayout">
 
@@ -202,6 +209,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="@string/wed_sat"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -263,13 +271,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/sunConstraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@color/beige"
-        android:backgroundTint="#BFFFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout"
-        tools:layout_editor_absoluteX="0dp">
+        android:background="@drawable/build_round_card"
+        android:backgroundTint="#99F9F3E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout">
 
         <TextView
             android:id="@+id/tv_farming_sched_sun"
@@ -277,6 +286,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="@string/sun"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
