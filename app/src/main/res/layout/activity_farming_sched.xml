@@ -271,13 +271,12 @@
         android:id="@+id/sunConstraintLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@drawable/build_round_card"
         android:backgroundTint="#99F9F3E5"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout"
-        app:layout_constraintVertical_bias="0.07999998">
+        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout">
 
         <TextView
             android:id="@+id/tv_farming_sched_sun"
