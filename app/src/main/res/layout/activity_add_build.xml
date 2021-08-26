@@ -156,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_add_build_er" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_add_build_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_add_build_crit_rate" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_add_build_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"

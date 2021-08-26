@@ -7,17 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AddBuildActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
 
     Button btnConfirm, btnCancel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_build);
 
-        this.btnConfirm = findViewById(R.id.btn_add_build_confirm);
-        this.btnCancel = findViewById(R.id.btn_add_build_cancel);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_profile);
+
+        this.btnConfirm = findViewById(R.id.btn_edit_profile_confirm);
+        this.btnCancel = findViewById(R.id.btn_edit_profile_cancel);
 
         this.btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +29,7 @@ public class AddBuildActivity extends AppCompatActivity {
         this.btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddBuildActivity.this, HomeActivity.class);
+                Intent intent = new Intent(EditProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
