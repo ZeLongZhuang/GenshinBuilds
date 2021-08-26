@@ -8,7 +8,7 @@
     <string name="signup_message">Are you a new Traveler?</string>
     <string name="name">Name</string>
     <string name="bday">Birthday</string>
-    <string name="uid">UID (optional)</string>
+    <string name="uid">UID</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="username">Username</string>
