@@ -27,4 +27,9 @@
     <string name="profile">Profile</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="uid_no">UID</string>
+    <string name="farming_sched">Farming Schedule</string>
+    <string name="mon_thurs">Monday / Thursday</string>
+    <string name="tues_fri">Tuesday / Friday</string>
+    <string name="wed_sat">Wednesday / Saturday</string>
+    <string name="sun">Sunday</string>
 </resources>

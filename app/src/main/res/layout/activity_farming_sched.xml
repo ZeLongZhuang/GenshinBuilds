@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_farm">
+
+    <TextView
+        android:id="@+id/tv_farming_sched_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowColor="@color/gray"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="@string/farming_sched"
+        android:textColor="@color/yellow_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/monwedConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#BFF9F3E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_title">
+
+        <TextView
+            android:id="@+id/tv_farming_sched_monthurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/mon_thurs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_freedom"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_guide_to_freedom" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_prosperity"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_freedom"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_guide_to_prosperity" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_transience"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_prosperity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_guide_to_transience" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_decarabian"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_transience"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_tile_of_decarabian_s_tower" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_guyun"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_decarabian"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_luminous_sands_from_guyun" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_branch"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_guyun"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_monthurs"
+            app:srcCompat="@drawable/item_coral_branch_of_a_distant_sea" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tuesfriConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#BFF9F3E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monwedConstraintLayout">
+
+        <TextView
+            android:id="@+id/tv_farming_sched_tuesfri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/tues_fri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_resistance"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_guide_to_resistance" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_diligence"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_resistance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_guide_to_diligence" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_elegance"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_diligence"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_guide_to_elegance" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_boreal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_elegance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_boreal_wolf_s_milk_tooth" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_mist"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_boreal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_mist_veiled_lead_elixir" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_narukami"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_mist"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_tuesfri"
+            app:srcCompat="@drawable/item_narukami_27s_wisdom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wedsatConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#BFF9F3E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tuesfriConstraintLayout">
+
+        <TextView
+            android:id="@+id/tv_farming_sched_wedsat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/wed_sat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_ballad"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_guide_to_ballad" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_gold"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_ballad"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_guide_to_gold" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_light"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_gold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_guide_to_light" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_chains"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_light"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_fetters_of_the_dandelion_gladiator" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_aero"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_chains"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_grain_of_aerosiderite" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_mask"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_aero"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_wedsat"
+            app:srcCompat="@drawable/item_mask_of_the_wicked_lieutenant" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sunConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/beige"
+        android:backgroundTint="#BFFFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/wedsatConstraintLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/tv_farming_sched_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_freedom2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_philosophies_of_freedom" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_prosperity2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_freedom2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_philosophies_of_prosperity" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_transience2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_prosperity2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_philosophies_of_transience" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_decarabian2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_transience2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_scattered_piece_of_decarabian_s_dream" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_guyun2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_decarabian2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_divine_body_from_guyun" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_branch2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_guyun2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_farming_sched_sun"
+            app:srcCompat="@drawable/item_golden_branch_of_a_distant_sea" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_resistance2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_freedom2"
+            app:srcCompat="@drawable/item_philosophies_of_resistance" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_diligence2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_resistance2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_prosperity2"
+            app:srcCompat="@drawable/item_philosophies_of_diligence" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_elegance2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_diligence2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_transience2"
+            app:srcCompat="@drawable/item_philosophies_of_elegance" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_boreal2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_elegance2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_decarabian2"
+            app:srcCompat="@drawable/item_boreal_wolf_s_nostalgia" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_mist2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_boreal2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_guyun2"
+            app:srcCompat="@drawable/item_mist_veiled_primo_elixir" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_narukami2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_mist2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_branch2"
+            app:srcCompat="@drawable/item_narukami_s_valor" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_ballad2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_resistance2"
+            app:srcCompat="@drawable/item_philosophies_of_ballad" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_gold2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_ballad2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_diligence2"
+            app:srcCompat="@drawable/item_philosophies_of_gold" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_light2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_gold2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_elegance2"
+            app:srcCompat="@drawable/item_philosophies_of_light" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_chains2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_light2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_boreal2"
+            app:srcCompat="@drawable/item_dream_of_the_dandelion_gladiator" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_aero2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_chains2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_mist2"
+            app:srcCompat="@drawable/item_chunk_of_aerosiderite" />
+
+        <ImageView
+            android:id="@+id/iv_farming_sched_mask2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_farming_sched_aero2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_farming_sched_narukami2"
+            app:srcCompat="@drawable/item_mask_of_the_kijin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
