@@ -14,7 +14,7 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "GenshinBuilds.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String USER_TABLE_NAME = "users";
     private static final String USER_COLUMN_ID = "_id";
@@ -127,6 +127,7 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         cv.put(BUILD_COLUMN_ARTIFACTSET, artifactSet);
         cv.put(BUILD_COLUMN_HP, hp);
         cv.put(BUILD_COLUMN_ATK, atk);
+        cv.put(BUILD_COLUMN_DEF, def);
         cv.put(BUILD_COLUMN_ER, er);
         cv.put(BUILD_COLUMN_CRITRATE, critRate);
         cv.put(BUILD_COLUMN_CRITDMG, critDmg);

@@ -9,12 +9,19 @@ import android.widget.Button;
 
 public class EditProfileActivity extends AppCompatActivity {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+
     Button btnConfirm, btnCancel;
+
+    String currentUsername;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
 
         this.btnConfirm = findViewById(R.id.btn_edit_profile_confirm);
         this.btnCancel = findViewById(R.id.btn_edit_profile_cancel);
@@ -30,6 +37,7 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EditProfileActivity.this, HomeActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }

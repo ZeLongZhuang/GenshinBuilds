@@ -13,6 +13,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeActivity extends AppCompatActivity {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+
     Button btnLogout;
     ImageView ivEditProfile, ivFarmingSched;
     FloatingActionButton fabAddBuild;
@@ -49,6 +51,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, EditProfileActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }
@@ -58,6 +61,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ViewFarmingSchedActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }
@@ -67,6 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, AddBuildActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }

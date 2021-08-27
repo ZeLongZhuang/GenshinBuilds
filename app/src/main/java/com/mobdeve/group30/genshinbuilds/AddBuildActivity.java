@@ -11,9 +11,13 @@ import android.widget.Toast;
 
 public class AddBuildActivity extends AppCompatActivity {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+
     EditText etCharacter, etLevel, etWeapon, etArtifactSet, etHp, etAtk, etDef, etEr, etCritRate, etCritDmg;
 
     Button btnConfirm, btnCancel;
+
+    String currentUsername;
 
     private GenshinDatabaseHelper myDB;
 
@@ -21,6 +25,8 @@ public class AddBuildActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_build);
+
+        this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
 
         this.etCharacter = findViewById(R.id.et_add_build_chara);
         this.etLevel = findViewById(R.id.et_add_build_level);
@@ -35,6 +41,9 @@ public class AddBuildActivity extends AppCompatActivity {
 
         this.btnConfirm = findViewById(R.id.btn_add_build_confirm);
         this.btnCancel = findViewById(R.id.btn_add_build_cancel);
+
+        myDB = new GenshinDatabaseHelper(this);
+
 
         this.btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +66,26 @@ public class AddBuildActivity extends AppCompatActivity {
                     Toast.makeText(AddBuildActivity.this, "Missing Fields detected. Please enter all fields.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-//                    if(myDB.insertBuild()) {
-//                        // Continue code below
-//                    }
+
+                    int iLevel = Integer.parseInt(level);
+                    int iHp = Integer.parseInt(hp);
+                    int iAtk = Integer.parseInt(atk);
+                    int iDef = Integer.parseInt(def);
+                    int iEr = Integer.parseInt(er);
+                    int iCritRate = Integer.parseInt(critRate);
+                    int iCritDmg = Integer.parseInt(critDmg);
+
+                    if(myDB.insertBuild(currentUsername, character, iLevel, weapon, artifactSet, iHp, iAtk, iDef, iEr, iCritRate, iCritDmg)) {
+                        Toast.makeText(AddBuildActivity.this, "Build added successfully", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(AddBuildActivity.this, HomeActivity.class);
+                        intent.putExtra(KEY_USERNAME, currentUsername);
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(AddBuildActivity.this, "Add Build failed", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }
             }
@@ -69,6 +95,7 @@ public class AddBuildActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddBuildActivity.this, HomeActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }

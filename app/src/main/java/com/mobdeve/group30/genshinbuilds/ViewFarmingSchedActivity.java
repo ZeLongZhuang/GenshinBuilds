@@ -10,7 +10,11 @@ import android.widget.ImageButton;
 
 public class ViewFarmingSchedActivity extends AppCompatActivity {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+
     ImageButton ibBack;
+
+    String currentUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +22,15 @@ public class ViewFarmingSchedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farming_sched);
 
+        this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
+
         this.ibBack = findViewById(R.id.ib_farming_sched_back);
 
         this.ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewFarmingSchedActivity.this, HomeActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
                 startActivity(intent);
                 finish();
             }
