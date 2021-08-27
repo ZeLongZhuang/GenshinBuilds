@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GenshinBuilds">
-        <activity android:name=".ViewFarmingSchedActivity"></activity>
+        <activity android:name=".ProfileDetailsActivity"></activity>
+        <activity android:name=".ViewFarmingSchedActivity" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".AddBuildActivity" />

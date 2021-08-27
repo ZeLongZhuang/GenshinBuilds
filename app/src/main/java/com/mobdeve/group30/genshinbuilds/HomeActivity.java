@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
     public static final String KEY_USERNAME = "KEY_USERNAME";
 
     Button btnLogout;
-    ImageView ivEditProfile, ivFarmingSched;
+    ImageView ivEditProfile, ivFarmingSched, ivUserPic;
     FloatingActionButton fabAddBuild;
 
     TextView tvUsername;
@@ -33,10 +33,21 @@ public class HomeActivity extends AppCompatActivity {
         this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
         this.tvUsername.setText(currentUsername);
 
+        this.ivUserPic = findViewById(R.id.iv_home_user_pic);
         this.btnLogout = findViewById(R.id.btn_home_logout);
         this.ivEditProfile = findViewById(R.id.iv_home_edit_profile);
         this.ivFarmingSched = findViewById(R.id.iv_home_farming_sched);
         this.fabAddBuild = findViewById(R.id.fab_add_build);
+
+        this.ivUserPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileDetailsActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         this.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
