@@ -7,7 +7,7 @@ public class Build {
     private String character, weapon, artifactSet;
     int level, hp, atk, def, er, critRate, critDmg;
 
-    public Build(String username, String character, String weapon, String artifactSet, int level, int hp, int atk, int def, int er, int critRate, int crtiDmg) {
+    public Build(String username, String character, int level, String weapon, String artifactSet, int hp, int atk, int def, int er, int critRate, int crtiDmg) {
         this.username = username;
         this.userPic = R.drawable.user_lumine;
 

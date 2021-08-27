@@ -1,5 +1,7 @@
 package com.mobdeve.group30.genshinbuilds;
 
+import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
 
     private ArrayList<Build> dataBuilds;
+    private Activity activity;
+    private Context context;
 
-    public BuildAdapter(ArrayList<Build> dataBuilds) { this.dataBuilds = dataBuilds; }
+    public BuildAdapter(Activity activity, Context context, ArrayList<Build> dataBuilds) {
+        this.dataBuilds = dataBuilds;
+    }
 
     @NonNull
     @NotNull

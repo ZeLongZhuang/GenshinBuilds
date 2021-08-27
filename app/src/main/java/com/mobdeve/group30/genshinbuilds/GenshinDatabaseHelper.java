@@ -140,4 +140,15 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    Cursor readAllBuilds() {
+        String query = "SELECT * FROM " + BUILD_TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 }
