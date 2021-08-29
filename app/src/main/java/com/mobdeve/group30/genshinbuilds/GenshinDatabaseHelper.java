@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -97,6 +98,14 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+//    public Boolean updateUser(String username, String password, String name, String birthday, String uid) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues cv = new ContentValues();
+//        cv.put(USER_COLUMN_TITLE, title);
+//        cv.put(COLUMN_AUTHOR, author);
+//        cv.put(COLUMN_PAGES, pages);
+//    }
+
     public Boolean isUniqueUsername(String username) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
@@ -141,7 +150,7 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    Cursor readAllBuilds() {
+    public Cursor readAllBuilds() {
         String query = "SELECT * FROM " + BUILD_TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -149,6 +158,13 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         if(db != null) {
             cursor = db.rawQuery(query, null);
         }
+        return cursor;
+    }
+
+    public Cursor readUser(String username) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
+
         return cursor;
     }
 }
