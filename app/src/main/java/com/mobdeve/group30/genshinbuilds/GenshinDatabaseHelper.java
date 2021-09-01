@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -98,13 +99,24 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-//    public Boolean updateUser(String username, String password, String name, String birthday, String uid) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues cv = new ContentValues();
-//        cv.put(USER_COLUMN_TITLE, title);
-//        cv.put(COLUMN_AUTHOR, author);
-//        cv.put(COLUMN_PAGES, pages);
-//    }
+    public Boolean updateUser(String username, String password, String name, String birthday, String uid) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(USER_COLUMN_PASSWORD, password);
+        cv.put(USER_COLUMN_NAME, name);
+        cv.put(USER_COLUMN_BIRTHDAY, birthday);
+        cv.put(USER_COLUMN_UID, uid);
+
+        long result = db.update(USER_TABLE_NAME, cv, "username=?", new String[]{username});
+
+        if (result == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
 
     public Boolean isUniqueUsername(String username) {
         SQLiteDatabase db = this.getWritableDatabase();

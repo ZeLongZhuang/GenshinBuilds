@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditProfileActivity extends AppCompatActivity {
 
@@ -46,7 +47,18 @@ public class EditProfileActivity extends AppCompatActivity {
         this.btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add code here
+
+                String password = etPassword.getText().toString().trim();
+                String name = etName.getText().toString().trim();
+                String birthday = etBirthday.getText().toString().trim();
+                String uid = etUid.getText().toString().trim();
+
+                if(myDB.updateUser(currentUsername, password, name, birthday, uid)) {
+                    Toast.makeText(EditProfileActivity.this, "Update Profile successfully", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(EditProfileActivity.this, "Update Profile Failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
