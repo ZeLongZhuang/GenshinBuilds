@@ -173,6 +173,22 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor readProfileBuilds(String username) {
+//        String query = "SELECT * FROM " + BUILD_TABLE_NAME + " WHERE username= " + username;
+//
+//        SQLiteDatabase db = this.getReadableDatabase();
+//
+//        Cursor cursor = null;
+//        if(db != null) {
+//            cursor = db.rawQuery(query, null);
+//        }
+//        return cursor;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM builds WHERE username = ?", new String[]{username});
+
+        return cursor;
+    }
+
     public Cursor readUser(String username) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
