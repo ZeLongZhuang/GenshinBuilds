@@ -9,8 +9,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,6 +40,8 @@ public class HomeActivity extends AppCompatActivity {
 
     GenshinDatabaseHelper myDB;
 
+    Spinner spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -56,6 +61,8 @@ public class HomeActivity extends AppCompatActivity {
         this.myDB = new GenshinDatabaseHelper(HomeActivity.this);
 
         dataBuilds = new ArrayList<>();
+
+        initSpinner();
 
         storeBuildsFromDatabase();
 
@@ -112,6 +119,61 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    private void initSpinner() {
+        this.spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.characters_array, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if(position != 0) { // if selected item not All
+                    String filterName = parent.getItemAtPosition(position).toString();
+
+                    ArrayList<Build> dataCharBuilds = new ArrayList<>();
+
+                    Cursor cursor = myDB.readCharBuilds(filterName);
+
+                    if(cursor.getCount() == 0) { //if no data
+
+                    }
+                    else {
+                        while (cursor.moveToNext()) {
+
+                            Build newBuild = new Build( cursor.getString(1),    // username
+                                    cursor.getString(3),    // character
+                                    cursor.getInt(2),       // level
+                                    cursor.getString(4),    // weapon
+                                    cursor.getString(5),    // artifactSet
+                                    cursor.getInt(6),       // hp
+                                    cursor.getInt(7),       // atk
+                                    cursor.getInt(8),       // def
+                                    cursor.getInt(9),       // er
+                                    cursor.getInt(10),       // critRate
+                                    cursor.getInt(11)       // critDmg
+                            );
+
+                            dataCharBuilds.add(newBuild);
+                        }
+                    }
+
+                    buildAdapter = new BuildAdapter(HomeActivity.this, HomeActivity.this, dataCharBuilds);
+                    recyclerView.setAdapter(buildAdapter);
+                }
+                else {
+                    buildAdapter = new BuildAdapter(HomeActivity.this, HomeActivity.this, dataBuilds);
+                    recyclerView.setAdapter(buildAdapter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
     private void storeBuildsFromDatabase() {
         Cursor cursor = myDB.readAllBuilds();
 
@@ -151,4 +213,6 @@ public class HomeActivity extends AppCompatActivity {
         this.buildAdapter = new BuildAdapter(HomeActivity.this, HomeActivity.this, this.dataBuilds);
         this.recyclerView.setAdapter(this.buildAdapter);
     }
+
+
 }

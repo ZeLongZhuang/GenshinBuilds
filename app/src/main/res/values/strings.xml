@@ -32,4 +32,47 @@
     <string name="tues_fri">Tuesday / Friday</string>
     <string name="wed_sat">Wednesday / Saturday</string>
     <string name="sun">Sunday</string>
+    <string-array name="characters_array">
+        <item>All</item>
+        <item>Albedo</item>
+        <item>Aloy</item>
+        <item>Amber</item>
+        <item>Barbara</item>
+        <item>Beidou</item>
+        <item>Bennett</item>
+        <item>Chongyun</item>
+        <item>Diluc</item>
+        <item>Diona</item>
+        <item>Eula</item>
+        <item>Fishcl</item>
+        <item>Ganyu</item>
+        <item>Hu Tao</item>
+        <item>Jean</item>
+        <item>Kaedehara Kazuha</item>
+        <item>Kaeya</item>
+        <item>Kamisato Ayaka</item>
+        <item>Keqing</item>
+        <item>Klee</item>
+        <item>Kujou Sara</item>
+        <item>Lisa</item>
+        <item>Mona</item>
+        <item>Ningguang</item>
+        <item>Noelle</item>
+        <item>Qiqi</item>
+        <item>Raiden Shogun</item>
+        <item>Razor</item>
+        <item>Rosaria</item>
+        <item>Sayu</item>
+        <item>Sucrose</item>
+        <item>Tartaglia</item>
+        <item>Traveler</item>
+        <item>Venti</item>
+        <item>Xiangling</item>
+        <item>Xiao</item>
+        <item>Xingqiu</item>
+        <item>Xinyan</item>
+        <item>Yanfei</item>
+        <item>Yoimiya</item>
+        <item>Zhongli</item>
+    </string-array>
 </resources>

@@ -74,6 +74,38 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterBoxConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/profileConstraintLayout"
+        android:background="#bcb9b2">
+
+        <TextView
+            android:id="@+id/tv_filter_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter by Character"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:background="@color/yellow_light"
+            android:popupBackground="@color/yellow_light"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_filter_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_filter_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_filter_label" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_home_hor1"
         android:layout_width="wrap_content"
@@ -104,5 +136,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileConstraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/filterBoxConstraintLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

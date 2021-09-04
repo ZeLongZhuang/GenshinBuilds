@@ -189,6 +189,13 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor readCharBuilds(String character) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM builds WHERE character = ?", new String[]{character});
+
+        return cursor;
+    }
+
     public Cursor readUser(String username) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
