@@ -234,6 +234,7 @@
             android:background="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_delete_forever_40" />
+            app:srcCompat="@drawable/ic_baseline_delete_forever_40"
+            android:padding="2dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
