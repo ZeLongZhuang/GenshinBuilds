@@ -2,6 +2,7 @@ package com.mobdeve.group30.genshinbuilds;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,8 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
 
     public BuildAdapter(Activity activity, Context context, ArrayList<Build> dataBuilds) {
         this.dataBuilds = dataBuilds;
+        this.activity = activity;
+        this.context = context;
     }
 
     @NonNull
@@ -39,7 +42,6 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull @NotNull BuildViewHolder holder, int position) {
         // call functions from Build.java
-        // currentBuild.set
 
         Build currentBuild = this.dataBuilds.get(position);
 
@@ -56,6 +58,11 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
         holder.setTvEr(Integer.toString(currentBuild.getEr()));
         holder.setTvCritRate(Integer.toString(currentBuild.getCritRate()));
         holder.setTvCritDmg(Integer.toString(currentBuild.getCritDmg()));
+
+        if(activity.toString().contains("HomeActivity"))
+            holder.setVisibilityDeleteButton(false);
+        else if(activity.toString().contains("ProfileActivity"))
+            holder.setVisibilityDeleteButton(true);
     }
 
     @Override

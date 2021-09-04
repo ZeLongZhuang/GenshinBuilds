@@ -25,6 +25,8 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
     private TextView tvCritRate;
     private TextView tvCritDmg;
 
+    private ImageButton ibDelete;
+
     public BuildViewHolder(@NonNull @NotNull View itemView) {
 
         super(itemView);
@@ -41,6 +43,8 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
         this.tvEr = itemView.findViewById(R.id.tv_item_value_er);
         this.tvCritRate = itemView.findViewById(R.id.tv_item_value_crate);
         this.tvCritDmg = itemView.findViewById(R.id.tv_item_value_cdmg);
+
+        this.ibDelete = itemView.findViewById(R.id.ib_item_delete);
     }
 
     public void setIbUserPic(int ibUserPic) {
@@ -89,6 +93,13 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
 
     public void setTvCritDmg(String tvCritDmg) {
         this.tvCritDmg.setText(tvCritDmg);
+    }
+
+    public void setVisibilityDeleteButton(boolean isVisible) {
+        if(isVisible)
+            this.ibDelete.setVisibility(View.VISIBLE);
+        else
+            this.ibDelete.setVisibility(View.GONE);
     }
 
 }
