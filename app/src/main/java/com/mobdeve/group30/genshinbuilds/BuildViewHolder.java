@@ -102,4 +102,7 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
             this.ibDelete.setVisibility(View.GONE);
     }
 
+    public void deleteBtnOnClickListener(View.OnClickListener onClickListener) {
+        this.ibDelete.setOnClickListener(onClickListener);
+    }
 }

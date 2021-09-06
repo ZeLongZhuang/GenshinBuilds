@@ -21,6 +21,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
     TextView tvUsername, tvUid, tvName;
 
     ImageButton ibBack;
+    ImageButton ibDelete;
 
     String currentUsername;
 
@@ -44,6 +45,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         this.tvUid = findViewById(R.id.tv_profile_uid);
 
         this.ibBack = findViewById(R.id.ib_profile_back);
+        this.ibDelete = findViewById(R.id.ib_item_delete);
 
         dataBuilds = new ArrayList<>();
 

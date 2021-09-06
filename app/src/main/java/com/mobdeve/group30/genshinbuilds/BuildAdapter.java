@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,10 +23,14 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
     private Activity activity;
     private Context context;
 
+    private GenshinDatabaseHelper myDB;
+
     public BuildAdapter(Activity activity, Context context, ArrayList<Build> dataBuilds) {
         this.dataBuilds = dataBuilds;
         this.activity = activity;
         this.context = context;
+
+        myDB = new GenshinDatabaseHelper(context);
     }
 
     @NonNull
@@ -35,6 +40,13 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView = inflater.inflate(R.layout.item_build, parent, false);
         BuildViewHolder buildViewHolder = new BuildViewHolder(itemView);
+
+//        buildViewHolder.deleteBtnOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dataBuilds.get(buildViewHolder.getBindingAdapterPosition())
+//            }
+//        });
 
         return buildViewHolder;
     }
@@ -63,6 +75,30 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
             holder.setVisibilityDeleteButton(false);
         else if(activity.toString().contains("ProfileActivity"))
             holder.setVisibilityDeleteButton(true);
+
+        holder.deleteBtnOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Build selectedBuild = new Build(dataBuilds.get(position).getUsername(),
+                                                dataBuilds.get(position).getCharacter(),
+                        dataBuilds.get(position).getLevel(),
+                        dataBuilds.get(position).getWeapon(),
+                        dataBuilds.get(position).getArtifactSet(),
+                        dataBuilds.get(position).getHp(),
+                        dataBuilds.get(position).getAtk(),
+                        dataBuilds.get(position).getDef(),
+                        dataBuilds.get(position).getEr(),
+                        dataBuilds.get(position).getCritRate(),
+                        dataBuilds.get(position).getCritDmg());
+
+                if(myDB.deleteBuild(selectedBuild)) {
+                    Toast.makeText(context, "Delete Build Successfully", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(context, "Delete Build Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override
