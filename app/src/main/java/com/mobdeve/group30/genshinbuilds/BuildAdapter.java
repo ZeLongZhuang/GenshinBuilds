@@ -2,6 +2,7 @@ package com.mobdeve.group30.genshinbuilds;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,13 +42,6 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
         View itemView = inflater.inflate(R.layout.item_build, parent, false);
         BuildViewHolder buildViewHolder = new BuildViewHolder(itemView);
 
-//        buildViewHolder.deleteBtnOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dataBuilds.get(buildViewHolder.getBindingAdapterPosition())
-//            }
-//        });
-
         return buildViewHolder;
     }
 
@@ -71,10 +65,18 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
         holder.setTvCritRate(Integer.toString(currentBuild.getCritRate()));
         holder.setTvCritDmg(Integer.toString(currentBuild.getCritDmg()));
 
-        if(activity.toString().contains("HomeActivity"))
-            holder.setVisibilityDeleteButton(false);
-        else if(activity.toString().contains("ProfileActivity"))
+        String currentUsername = activity.getIntent().getStringExtra("KEY_USERNAME");
+
+//      REMOVE THIS COMMENT TO ONLY ENABLE DELETE BUILD ON THE PROFILE DETAILS SCREEN
+//        if(activity.toString().contains("HomeActivity"))
+//            holder.setVisibilityDeleteButton(false);
+//        else if(activity.toString().contains("ProfileActivity"))
+//            holder.setVisibilityDeleteButton(true);
+
+        if(currentUsername.equals(currentBuild.getUsername()))
             holder.setVisibilityDeleteButton(true);
+        else
+            holder.setVisibilityDeleteButton(false);
 
         holder.deleteBtnOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +94,7 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
                         dataBuilds.get(position).getCritDmg());
 
                 if(myDB.deleteBuild(selectedBuild)) {
-                    Toast.makeText(context, "Delete Build Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Delete Build Successfully. Refresh this page to see changes.", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Toast.makeText(context, "Delete Build Failed", Toast.LENGTH_SHORT).show();

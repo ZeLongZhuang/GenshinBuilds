@@ -198,16 +198,6 @@ public class GenshinDatabaseHelper extends SQLiteOpenHelper {
     public boolean deleteBuild(Build build) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-//        return db.delete(BUILD_TABLE_NAME,
-//                BUILD_COLUMN_USERNAME + "=" + build.getUsername() + " AND " +
-//                            BUILD_COLUMN_CHARACTER + "=" + build.getCharacter() + " AND " +
-//                        BUILD_COLUMN_LEVEL + "=" + build.getLevel()
-//                , null) > 0;
-
-        return db.delete(BUILD_TABLE_NAME, "username=? AND character=? AND level=?", new String[]{build.getUsername(), build.getCharacter(), String.valueOf(build.getLevel())}) > 0;
-
-
-//        db.execSQL("DELETE FROM " + BUILD_TABLE_NAME + " WHERE username=? AND character=? AND level=? AND weapon=? AND artifactSet=? AND hp=? AND atk=? AND def=? AND er=? AND critRate=? AND critDmg=?", new String[]{build.getUsername()}, new String[]{build.getCharacter()}, new int[]{build.getLevel()}, new String[]{build.getWeapon()}, new String[]{build.getArtifactSet()}, new int[]{build.getHp()}, new int[]{build.getAtk()}, new int[]{build.getDef()}, new int[]{build.getEr()}, new int[]{build.getCritRate()}, new int[]{build.getCritDmg()});
-//        db.execSQL("DELETE FROM " + BUILD_TABLE_NAME + " WHERE username=? AND character=? AND level=? AND weapon=? AND artifactSet=? AND hp=? AND atk=? AND def=? AND er=? AND critRate=? AND critDmg=?", new String[]{build.getUsername(), build.getCharacter(), Integer.toString(build.getLevel()), build.getWeapon(), build.getArtifactSet() , Integer.toString(build.getHp()), Integer.toString(build.getAtk()), Integer.toString(build.getDef()), Integer.toString(build.getEr()), Integer.toString(build.getCritRate()), Integer.toString(build.getCritDmg())});
+        return db.delete(BUILD_TABLE_NAME, "username=? AND character=? AND level=? AND weapon=? AND artifactset=? AND hp=? AND atk=? AND def=? AND er=? AND critrate=? AND critdamage=?", new String[]{build.getUsername(), build.getCharacter(), String.valueOf(build.getLevel()), build.getWeapon(), build.getArtifactSet(), String.valueOf(build.getHp()), String.valueOf(build.getAtk()), String.valueOf(build.getDef()), String.valueOf(build.getEr()), String.valueOf(build.getCritRate()), String.valueOf(build.getCritDmg())}) > 0;
     }
 }

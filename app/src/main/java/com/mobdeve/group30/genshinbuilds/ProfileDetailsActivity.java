@@ -89,9 +89,6 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         else {
             while (cursor.moveToNext()) {
 
-//                for(int i = 0; i < cursor.getColumnCount(); i++)
-//                    Log.d("CursorTag", "Column " + i + " " + cursor.getString(i));
-
                 Build newBuild = new Build( cursor.getString(1),    // username
                                             cursor.getString(3),    // character
                                             cursor.getInt(2),       // level
