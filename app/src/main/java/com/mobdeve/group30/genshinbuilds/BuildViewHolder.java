@@ -105,4 +105,8 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
     public void deleteBtnOnClickListener(View.OnClickListener onClickListener) {
         this.ibDelete.setOnClickListener(onClickListener);
     }
+
+    public void viewProfileDetailsOnClickListener(View.OnClickListener onClickListener) {
+        this.ibUserPic.setOnClickListener(onClickListener);
+    }
 }

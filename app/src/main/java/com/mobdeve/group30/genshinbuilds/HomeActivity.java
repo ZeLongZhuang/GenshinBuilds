@@ -24,6 +24,7 @@ import java.util.Collections;
 public class HomeActivity extends AppCompatActivity {
 
     public static final String KEY_USERNAME = "KEY_USERNAME";
+    public static final String KEY_USERNAME_CLICKED = "KEY_USERNAME_CLICKED";
 
     Button btnLogout;
     ImageView ivEditProfile, ivFarmingSched, ivUserPic;
@@ -73,6 +74,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ProfileDetailsActivity.class);
                 intent.putExtra(KEY_USERNAME, currentUsername);
+                intent.putExtra(KEY_USERNAME_CLICKED, currentUsername);
                 startActivity(intent);
                 finish();
             }

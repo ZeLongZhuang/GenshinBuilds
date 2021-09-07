@@ -17,6 +17,7 @@ import java.util.Collections;
 public class ProfileDetailsActivity extends AppCompatActivity {
 
     public static final String KEY_USERNAME = "KEY_USERNAME";
+    public static final String KEY_USERNAME_CLICKED = "KEY_USERNAME_CLICKED";
 
     TextView tvUsername, tvUid, tvName;
 
@@ -24,6 +25,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
     ImageButton ibDelete;
 
     String currentUsername;
+    String usernameClicked;
 
     RecyclerView recyclerView;
     BuildAdapter buildAdapter;
@@ -39,6 +41,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         this.currentUsername = getIntent().getStringExtra("KEY_USERNAME");
+        this.usernameClicked = getIntent().getStringExtra("KEY_USERNAME_CLICKED");
 
         this.tvUsername = findViewById(R.id.tv_profile_username);
         this.tvName = findViewById(R.id.tv_profile_name);
@@ -67,7 +70,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
     }
 
     private void initValues() {
-        Cursor cursor = myDB.readUser(currentUsername);
+        Cursor cursor = myDB.readUser(usernameClicked);
 
         if(cursor.getCount() == 0) { //if no data
         }
@@ -81,7 +84,7 @@ public class ProfileDetailsActivity extends AppCompatActivity {
     }
 
     private void storeProfileBuildsFromDatabase() {
-        Cursor cursor = myDB.readProfileBuilds(currentUsername);
+        Cursor cursor = myDB.readProfileBuilds(usernameClicked);
 
         if(cursor.getCount() == 0) { //if no data
 

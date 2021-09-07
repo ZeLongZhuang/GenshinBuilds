@@ -20,6 +20,10 @@ import java.util.Collection;
 
 public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
 
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+    public static final String KEY_USERNAME_CLICKED = "KEY_USERNAME_CLICKED";
+
+
     private ArrayList<Build> dataBuilds;
     private Activity activity;
     private Context context;
@@ -99,6 +103,16 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
                 else {
                     Toast.makeText(context, "Delete Build Failed", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        holder.viewProfileDetailsOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ProfileDetailsActivity.class);
+                intent.putExtra(KEY_USERNAME, currentUsername);
+                intent.putExtra(KEY_USERNAME_CLICKED, currentBuild.getUsername());
+                context.startActivity(intent);
             }
         });
     }
