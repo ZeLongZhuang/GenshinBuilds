@@ -9,30 +9,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8sp"
-        android:background="@drawable/build_round_card">
+        android:background="@drawable/item_build_container">
 
         <ImageButton
             android:id="@+id/ib_item_user_pic"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/user_lumine"
-            android:background="@null"/>
+            app:srcCompat="@drawable/user_lumine" />
 
         <TextView
             android:id="@+id/tv_item_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Traveller123"
+            android:fontFamily="sans-serif-medium"
             android:paddingLeft="10dp"
+            android:text="Traveller123"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/ib_item_user_pic"
             app:layout_constraintStart_toEndOf="@+id/ib_item_user_pic"
-            app:layout_constraintTop_toTopOf="@+id/ib_item_user_pic"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="14dp"/>
+            app:layout_constraintTop_toTopOf="@+id/ib_item_user_pic" />
 
         <TextView
             android:id="@+id/tv_item_label_character"
@@ -197,7 +199,9 @@
             android:id="@+id/tv_item_label_cdmg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="CRIT DMG"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv_item_label_crate"
             app:layout_constraintTop_toBottomOf="@+id/tv_item_label_crate" />
 
@@ -214,31 +218,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent=".05"/>
+            app:layout_constraintGuide_percent=".05" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_vert2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent=".1"
-            />
+            app:layout_constraintGuide_percent=".1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_vert3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent=".4"/>
+            app:layout_constraintGuide_percent=".4" />
 
         <ImageButton
             android:id="@+id/ib_item_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@null"
+            android:padding="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_delete_forever_40"
-            android:padding="2dp"/>
+            app:srcCompat="@drawable/ic_baseline_delete_forever_40" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
