@@ -19,7 +19,8 @@
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/user_lumine" />
+            app:srcCompat="@drawable/user_lumine"
+            android:background="@null"/>
 
         <TextView
             android:id="@+id/tv_item_username"
