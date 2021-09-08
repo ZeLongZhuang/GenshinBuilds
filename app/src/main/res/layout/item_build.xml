@@ -14,7 +14,7 @@
         <ImageButton
             android:id="@+id/ib_item_user_pic"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Traveller123"
+            android:paddingLeft="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/ib_item_user_pic"
             app:layout_constraintStart_toEndOf="@+id/ib_item_user_pic"
             app:layout_constraintTop_toTopOf="@+id/ib_item_user_pic"
@@ -37,6 +38,7 @@
             android:id="@+id/tv_item_label_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="10dp"
             android:text="Character"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/gl_vert1"
@@ -46,6 +48,7 @@
             android:id="@+id/tv_item_value_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="10dp"
             android:text="Zhongli"
             app:layout_constraintStart_toStartOf="@+id/gl_vert3"
             app:layout_constraintTop_toTopOf="@+id/tv_item_label_character" />
