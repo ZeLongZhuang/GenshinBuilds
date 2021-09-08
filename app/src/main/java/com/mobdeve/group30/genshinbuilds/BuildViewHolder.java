@@ -2,6 +2,7 @@ package com.mobdeve.group30.genshinbuilds;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,8 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
 
     private ImageButton ibUserPic;
     private TextView tvUsername;
+
+    private ImageView ivCharacter;
 
     private TextView tvCharacter;
     private TextView tvLevel;
@@ -43,6 +46,8 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
         this.tvEr = itemView.findViewById(R.id.tv_item_value_er);
         this.tvCritRate = itemView.findViewById(R.id.tv_item_value_crate);
         this.tvCritDmg = itemView.findViewById(R.id.tv_item_value_cdmg);
+
+        this.ivCharacter = itemView.findViewById(R.id.iv_character_thumb);
 
         this.ibDelete = itemView.findViewById(R.id.ib_item_delete);
     }
@@ -93,6 +98,10 @@ public class BuildViewHolder extends RecyclerView.ViewHolder {
 
     public void setTvCritDmg(String tvCritDmg) {
         this.tvCritDmg.setText(tvCritDmg);
+    }
+
+    public void setIvCharacter(int ivCharacter) {
+        this.ivCharacter.setImageResource(ivCharacter);
     }
 
     public void setVisibilityDeleteButton(boolean isVisible) {

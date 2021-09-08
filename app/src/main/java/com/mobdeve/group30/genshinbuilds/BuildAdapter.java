@@ -69,6 +69,8 @@ public class BuildAdapter extends RecyclerView.Adapter<BuildViewHolder> {
         holder.setTvCritRate(Integer.toString(currentBuild.getCritRate()));
         holder.setTvCritDmg(Integer.toString(currentBuild.getCritDmg()));
 
+        holder.setIvCharacter(context.getResources().getIdentifier("character_" + currentBuild.getCharacter().toLowerCase() + "_thumb", "drawable", activity.getPackageName()));
+
         String currentUsername = activity.getIntent().getStringExtra("KEY_USERNAME");
 
 //      REMOVE THIS COMMENT TO ONLY ENABLE DELETE BUILD ON THE PROFILE DETAILS SCREEN
