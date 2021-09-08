@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class AddBuildActivity extends AppCompatActivity {
 
     public static final String KEY_USERNAME = "KEY_USERNAME";
@@ -66,27 +68,32 @@ public class AddBuildActivity extends AppCompatActivity {
                     Toast.makeText(AddBuildActivity.this, "Missing Fields detected. Please enter all fields.", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    String[] arraysCharacters = AddBuildActivity.this.getResources().getStringArray(R.array.characters_array);
 
-                    int iLevel = Integer.parseInt(level);
-                    int iHp = Integer.parseInt(hp);
-                    int iAtk = Integer.parseInt(atk);
-                    int iDef = Integer.parseInt(def);
-                    int iEr = Integer.parseInt(er);
-                    int iCritRate = Integer.parseInt(critRate);
-                    int iCritDmg = Integer.parseInt(critDmg);
+                    if(Arrays.asList(arraysCharacters).contains(character)) {
+                        int iLevel = Integer.parseInt(level);
+                        int iHp = Integer.parseInt(hp);
+                        int iAtk = Integer.parseInt(atk);
+                        int iDef = Integer.parseInt(def);
+                        int iEr = Integer.parseInt(er);
+                        int iCritRate = Integer.parseInt(critRate);
+                        int iCritDmg = Integer.parseInt(critDmg);
 
-                    if(myDB.insertBuild(currentUsername, character, iLevel, weapon, artifactSet, iHp, iAtk, iDef, iEr, iCritRate, iCritDmg)) {
-                        Toast.makeText(AddBuildActivity.this, "Build added successfully", Toast.LENGTH_SHORT).show();
+                        if(myDB.insertBuild(currentUsername, character, iLevel, weapon, artifactSet, iHp, iAtk, iDef, iEr, iCritRate, iCritDmg)) {
+                            Toast.makeText(AddBuildActivity.this, "Build added successfully", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(AddBuildActivity.this, HomeActivity.class);
-                        intent.putExtra(KEY_USERNAME, currentUsername);
-                        startActivity(intent);
+                            Intent intent = new Intent(AddBuildActivity.this, HomeActivity.class);
+                            intent.putExtra(KEY_USERNAME, currentUsername);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(AddBuildActivity.this, "Add Build failed", Toast.LENGTH_SHORT).show();
+
+                        }
                     }
                     else {
-                        Toast.makeText(AddBuildActivity.this, "Add Build failed", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(AddBuildActivity.this, "Invalid Character Name", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             }
         });
