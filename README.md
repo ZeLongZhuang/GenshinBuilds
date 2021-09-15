@@ -10,12 +10,6 @@ The application, GenshinBuilds, is a forum application focused on documenting an
 * Android Studio IDE
 * SQLite Database
 
-## App Screenshots
-
-| Login | Home | Profile | Schedule |
-|-------|------|---------|----------|
-|!()[img/Screenshot_Login.png]| | | |
-
 ## Authors
 
 * Zhuang, Ze Long
