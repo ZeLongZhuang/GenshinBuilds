@@ -13,8 +13,8 @@ The application, GenshinBuilds, is a forum application focused on documenting an
 ## App Screenshots
 
 | Login | Home | Profile | Farm Schedule |
-|-------|------|---------|---------------|
-|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Login.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Home.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Profile.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_FarmingSched.png){:height="36px"}|
+|---------------|---------------|---------------|---------------|
+|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Login.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Home.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Profile.png)|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_FarmingSched.png)|
 
 ## Authors
 
