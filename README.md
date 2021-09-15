@@ -14,7 +14,7 @@ The application, GenshinBuilds, is a forum application focused on documenting an
 
 | Login |
 |-------|
-|!()[https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Login.png]|
+|![](https://github.com/ZeLongZhuang/GenshinBuilds/blob/master/img/Screenshot_Login.png)|
 
 ## Authors
 
