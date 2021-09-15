@@ -18,5 +18,5 @@ The application, GenshinBuilds, is a forum application focused on documenting an
 
 ## Authors
 
-* ![Zhuang, Ze Long](https://github.com/ZeLongZhuang)
+* [Zhuang, Ze Long](https://github.com/ZeLongZhuang)
 * Rebong, Leana
