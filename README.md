@@ -9,6 +9,7 @@ The application, GenshinBuilds, is a forum application focused on documenting an
 * Java Programming Language
 * Android Studio IDE
 * SQLite Database
+* Camera API
 
 ## App Screenshots
 
